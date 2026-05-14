@@ -516,6 +516,19 @@ overflow: hidden;
   overflow: hidden;
 }
 
+.whatsapp-video-link {
+  display: block;
+}
+
+.whatsapp-video {
+  display: block;
+  width: 100%;
+  max-height: 720px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 12px 34px rgba(179, 61, 114, 0.22);
+}
+
 /* About page full-width background behind hero area */
 .about-section {
   position: relative;
