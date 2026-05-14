@@ -239,4 +239,127 @@ $('#nextBtn').on('click', function() {
     }
 });
 
+  // Particle trail on hover (banner/hero images)
+  (function initParticleTrail() {
+    var targets = document.querySelectorAll('.banner-item, .hero-banner-item');
+    if (!targets || targets.length === 0) return;
+
+    function setup(el) {
+      if (el.__particleTrailSetup) return;
+      el.__particleTrailSetup = true;
+
+      var canvas = document.createElement('canvas');
+      var ctx = canvas.getContext('2d');
+      canvas.className = 'particle-trail-canvas';
+
+      // Ensure we can absolutely-position the canvas
+      var computedPos = window.getComputedStyle(el).position;
+      if (computedPos === 'static') el.style.position = 'relative';
+      el.style.overflow = 'hidden';
+
+      el.appendChild(canvas);
+
+      var particles = [];
+      var raf = null;
+      var last = { x: 0, y: 0, t: 0 };
+
+      function resize() {
+        var rect = el.getBoundingClientRect();
+        var dpr = window.devicePixelRatio || 1;
+        canvas.width = Math.max(1, Math.floor(rect.width * dpr));
+        canvas.height = Math.max(1, Math.floor(rect.height * dpr));
+        canvas.style.width = rect.width + 'px';
+        canvas.style.height = rect.height + 'px';
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+
+      function spawn(x, y, intensity) {
+        var count = Math.min(10, 2 + Math.floor(intensity * 8));
+        for (var i = 0; i < count; i++) {
+          var ang = Math.random() * Math.PI * 2;
+          var spd = 0.25 + Math.random() * 0.9;
+          particles.push({
+            x: x + (Math.random() - 0.5) * 6,
+            y: y + (Math.random() - 0.5) * 6,
+            vx: Math.cos(ang) * spd,
+            vy: Math.sin(ang) * spd - 0.35,
+            life: 520 + Math.random() * 520,
+            age: 0,
+            r: 1.2 + Math.random() * 1.9,
+            hue: 285 + Math.random() * 35 // purple -> pink
+          });
+        }
+      }
+
+      function tick(ts) {
+        raf = null;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        for (var i = particles.length - 1; i >= 0; i--) {
+          var p = particles[i];
+          p.age += 16.7;
+          var t = p.age / p.life;
+          if (t >= 1) {
+            particles.splice(i, 1);
+            continue;
+          }
+
+          // Motion
+          p.vx *= 0.98;
+          p.vy = p.vy * 0.98 + 0.02; // slight gravity
+          p.x += p.vx * 5;
+          p.y += p.vy * 5;
+
+          // Fade + sparkle
+          var alpha = (1 - t) * 0.9;
+          var glow = 10 * (1 - t);
+          ctx.beginPath();
+          ctx.fillStyle = 'hsla(' + p.hue + ', 92%, 70%, ' + alpha + ')';
+          ctx.shadowColor = 'hsla(' + p.hue + ', 92%, 70%, ' + alpha + ')';
+          ctx.shadowBlur = glow;
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        // keep animating while particles exist
+        if (particles.length > 0) raf = requestAnimationFrame(tick);
+      }
+
+      function ensureRunning() {
+        if (!raf) raf = requestAnimationFrame(tick);
+      }
+
+      el.addEventListener('mouseenter', function () {
+        resize();
+      });
+
+      el.addEventListener('mousemove', function (e) {
+        var rect = el.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        var now = performance.now();
+        var dt = Math.max(1, now - last.t);
+        var dx = x - last.x;
+        var dy = y - last.y;
+        var speed = Math.min(1, Math.sqrt(dx * dx + dy * dy) / (dt * 0.8));
+        last.x = x;
+        last.y = y;
+        last.t = now;
+        spawn(x, y, speed);
+        ensureRunning();
+      });
+
+      el.addEventListener('mouseleave', function () {
+        // Let remaining particles finish; stop spawning.
+      });
+
+      window.addEventListener('resize', function () {
+        // Resize lazily; next mouseenter/move will correct too.
+        resize();
+      });
+    }
+
+    targets.forEach(setup);
+  })();
+
 });
