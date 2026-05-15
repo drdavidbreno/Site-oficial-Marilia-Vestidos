@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja</title>
+    <title>Loja - Marilia Arraia dos Sonhos</title>
     <meta name="description" content="" >
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico?v=2">
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/font/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
      <!-- font-awesome CSS -->
@@ -84,6 +84,9 @@
         <a class="nav-link" href="about.html">Sobre nós</a>
     </li>
     <li class="nav-item w-100 w-lg-auto">
+        <a class="nav-link" href="shop.html">Vestidos</a>
+    </li>
+    <li class="nav-item w-100 w-lg-auto">
         <a class="nav-link" href="contact.html">Contato</a>
     </li>
 </ul></div>
@@ -131,21 +134,6 @@
     <!-- Header Section End -->
 
     <main>
-        <div class="breadcrumb-main">
-            <div class="container">
-                <div class="breadcrumb-container">
-                    <h2 class="page-title">Página da loja</h2>
-                    <ul class="breadcrumb">
-                      <li class="breadcrumb-item">
-                        <a href="#">Início</a>
-                      </li>
-                      <li class="breadcrumb-item">
-                        <a href="#">Página da loja</a>
-                      </li>
-                    </ul>
-                  </div>
-            </div>
-        </div>
         <div class="shop-section">
         <!-- section -->
         <div class="mb-5 mt-50">
@@ -154,174 +142,13 @@
               <!-- row -->
               <div class="row gx-10">
                  <!-- col -->
-                 <aside class="col-lg-3 col-md-4 mb-2">
-                    <div class="offcanvas offcanvas-start offcanvas-collapse w-md-50" tabindex="-1" id="offcanvasCategoria" aria-labelledby="offcanvasCategoriaLabel">
-                       <div class="offcanvas-header d-lg-none border-bottom">
-                          <h5 class="offcanvas-title" id="offcanvasCategoriaLabel">Filtro</h5>
-                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                       </div>
-                       <div class="offcanvas-body ps-lg-2 pt-lg-0">
-                         <div class="mb-4 border-bottom pb-3">
-                            <!-- price -->
-                            <h5 class="mb-3">Preço</h5>
-                            <div>
-                               <!-- range -->
-                               <div id="priceRange" class="mb-4"></div>
-                               <small class="text-muted">Preço:</small>
-                               <span id="priceRange-value" class="small"></span>
-                            </div>
-                         </div>
-                         <div class="my-4 border-bottom pb-3">
-                            <h5 class="mb-3">Cor</h5>
-                            <!-- form check -->
-                            <div class="form-check mb-2">
-                               <!-- input -->
-                               <input class="form-check-input" type="checkbox" value="" id="tVermelho" checked>
-                               <label class="form-check-label" for="tVermelho">Vermelho</label>
-                            </div>
-                            <!-- form check -->
-                            <div class="form-check mb-2">
-                               <!-- input -->
-                               <input class="form-check-input" type="checkbox" value="" id="tAzul">
-                               <label class="form-check-label" for="tAzul">Azul</label>
-                            </div>
-                            <!-- form check -->
-                            <div class="form-check mb-2">
-                               <!-- input -->
-                               <input class="form-check-input" type="checkbox" value="" id="tPreto">
-                               <label class="form-check-label" for="tPreto">Preto</label>
-                            </div>
-                         </div>
-                         <div class="my-4 border-bottom pb-3">
-                            <h5 class="mb-3">Tamanho</h5>
-                            <!-- form check -->
-                            <div class="form-check mb-2">
-                               <!-- input -->
-                               <input class="form-check-input" type="checkbox" value="" id="tPequeno" checked>
-                               <label class="form-check-label" for="tPequeno">Pequeno</label>
-                            </div>
-                            <!-- form check -->
-                            <div class="form-check mb-2">
-                               <!-- input -->
-                               <input class="form-check-input" type="checkbox" value="Médio" id="tMédio">
-                               <label class="form-check-label" for="tMédio">Médio</label>
-                            </div>
-                            <!-- form check -->
-                            <div class="form-check mb-2">
-                               <!-- input -->
-                               <input class="form-check-input" type="checkbox" value="Grande" id="tGrande">
-                               <label class="form-check-label" for="tGrande">Grande</label>
-                            </div>
-                         </div>
-                         <div class="mt-4">
-                            <h5 class="mb-3">Avaliação</h5>
-                            <div>
-                               <!-- form check -->
-                               <div class="form-check mb-2">
-                                  <!-- input -->
-                                  <input class="form-check-input" type="checkbox" value="" checked id="ratingFive">
-                                  <label class="form-check-label" for="ratingFive">
-                                     <i class="bi bi-star-fill text-warning"></i>
-                                     <i class="bi bi-star-fill text-warning"></i>
-                                     <i class="bi bi-star-fill text-warning"></i>
-                                     <i class="bi bi-star-fill text-warning"></i>
-                                     <i class="bi bi-star-fill text-warning"></i>
-                                  </label>
-                               </div>
-                               <!-- form check -->
-                               <div class="form-check mb-2">
-                                  <!-- input -->
-                                  <input class="form-check-input" type="checkbox" value="" id="ratingFour">
-                                  <label class="form-check-label" for="ratingFour">
-                                     <i class="bi bi-star-fill text-warning"></i>
-                                     <i class="bi bi-star-fill text-warning"></i>
-                                     <i class="bi bi-star-fill text-warning"></i>
-                                     <i class="bi bi-star-fill text-warning"></i>
-                                     <i class="bi bi-star text-warning"></i>
-                                  </label>
-                               </div>
-                               <!-- form check -->
-                               <div class="form-check mb-2">
-                                  <!-- input -->
-                                  <input class="form-check-input" type="checkbox" value="" id="ratingThree">
-                                  <label class="form-check-label" for="ratingThree">
-                                     <i class="bi bi-star-fill text-warning"></i>
-                                     <i class="bi bi-star-fill text-warning"></i>
-                                     <i class="bi bi-star-fill text-warning"></i>
-                                     <i class="bi bi-star text-warning"></i>
-                                     <i class="bi bi-star text-warning"></i>
-                                  </label>
-                               </div>
-                               <!-- form check -->
-                               <div class="form-check mb-2">
-                                  <!-- input -->
-                                  <input class="form-check-input" type="checkbox" value="" id="ratingTwo">
-                                  <label class="form-check-label" for="ratingTwo">
-                                     <i class="bi bi-star-fill text-warning"></i>
-                                     <i class="bi bi-star-fill text-warning"></i>
-                                     <i class="bi bi-star text-warning"></i>
-                                     <i class="bi bi-star text-warning"></i>
-                                     <i class="bi bi-star text-warning"></i>
-                                  </label>
-                               </div>
-                               <!-- form check -->
-                               <div class="form-check mb-2">
-                                  <!-- input -->
-                                  <input class="form-check-input" type="checkbox" value="" id="ratingOne">
-                                  <label class="form-check-label" for="ratingOne">
-                                     <i class="bi bi-star-fill text-warning"></i>
-                                     <i class="bi bi-star text-warning"></i>
-                                     <i class="bi bi-star text-warning"></i>
-                                     <i class="bi bi-star text-warning"></i>
-                                     <i class="bi bi-star text-warning"></i>
-                                  </label>
-                               </div>
-                            </div>
-                         </div>
-                       </div>
-                    </div>
-                 </aside>
-                 <section class="col-lg-9 col-md-12">
-                    <div class="d-flex">
-                        <div class="d-flex mt-2 me-2 align-items-center justify-content-between">
-                            <div class="d-lg-none">
-                            <a class="btn border px-4 text-muted" data-bs-toggle="offcanvas" href="#offcanvasCategoria" role="button" aria-controls="offcanvasCategoria">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentCor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-filter me-2">
-                                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
-                                </svg>
-                                <span class="d-none">Filtros</span>
-                            </a>
-                            </div>
-                        </div>
-
-                        <div class="d-flex mt-2 mt-lg-0">
-                            <div class="me-2 flex-grow-1">
-                            <!-- select option -->
-                            <select class="nice-option">
-                                <option selected="">Mostrar: 50</option>
-                                <option value="10">10</option>
-                                <option value="20">20</option>
-                                <option value="30">30</option>
-                            </select>
-                            </div>
-                            <div>
-                            <!-- select option -->
-                            <select class="nice-option">
-                                <option selected="">Ordenar por</option>
-                                <option value="Menor para maior">Menor para maior</option>
-                                <option value="Maior para menor">Maior para menor</option>
-                                <option value="Data de lançamento">Data de lançamento</option>
-                                <option value="Avaliação média">Avaliação média</option>
-                            </select>
-                            </div>
-                        </div>
-                    </div>
+                 <section class="col-12">
                 <div class="product">
                     <div class="row g-4 row-cols-xl-3 row-cols-lg-3 row-cols-2 row-cols-md-2 mt-1">
                         <div class="col">
                             <div class="card product-card">
-                                <div class="product-image"><img src="./assets/images/product/23.png" class="card-img-top image-first" alt="Template de eCommerce">
-                                    <img src="./assets/images/product/24.png" class="card-img-top image-second" alt="Template de eCommerce"></div>
+                                <div class="product-image"><img src="./assets/images/product/1.png" class="card-img-top image-first" alt="Vestidos Arraia dos Sonhos">
+                                    <img src="./assets/images/product/2.png" class="card-img-top image-second" alt="Vestidos Arraia dos Sonhos"></div>
                                 <div class="card-body pt-0">
                                     <div class="icons">
                                         <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Favoritos">
@@ -331,7 +158,7 @@
                                     <span class="discount-badge">20% OFF</span>
                                 </div>
                                 <div class="product-price px-3 pb-2">
-                                    <h5 class="card-title">Madeira</h5>
+                                    <h5 class="card-title">Vestidos Arraia dos Sonhos</h5>
                                     <div class="mb-2">
                                         <small class="text-warning">
                                             <i class="bi bi-star-fill"></i>
@@ -355,8 +182,8 @@
                         </div>
                         <div class="col">
                             <div class="card product-card">
-                                <div class="product-image"><img src="./assets/images/product/17.png" class="card-img-top image-first" alt="Template de eCommerce">
-                                    <img src="./assets/images/product/18.png" class="card-img-top image-second" alt="Template de eCommerce"></div>
+                                <div class="product-image"><img src="./assets/images/product/3.png" class="card-img-top image-first" alt="Vestidos Arraia dos Sonhos">
+                                    <img src="./assets/images/product/4.png" class="card-img-top image-second" alt="Vestidos Arraia dos Sonhos"></div>
                                 <div class="card-body pt-0">
                                     <div class="icons">
                                         <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Favoritos">
@@ -366,7 +193,7 @@
                                     <span class="discount-badge">10% OFF</span>
                                 </div>
                                 <div class="product-price px-3 pb-2">
-                                    <h5 class="card-title">Seater beige</h5>
+                                    <h5 class="card-title">Vestidos Arraia dos Sonhos</h5>
                                     <div class="mb-2">
                                         <small class="text-warning">
                                             <i class="bi bi-star-fill"></i>
@@ -390,8 +217,8 @@
                         </div>
                         <div class="col">
                             <div class="card product-card">
-                                <div class="product-image"><img src="./assets/images/product/1.png" class="card-img-top image-first" alt="Template de eCommerce">
-                                    <img src="./assets/images/product/2.png" class="card-img-top image-second" alt="Template de eCommerce"></div>
+                                <div class="product-image"><img src="./assets/images/product/5.png" class="card-img-top image-first" alt="Vestidos Arraia dos Sonhos">
+                                    <img src="./assets/images/product/6.png" class="card-img-top image-second" alt="Vestidos Arraia dos Sonhos"></div>
                                 <div class="card-body pt-0">
                                     <div class="icons">
                                         <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Favoritos">
@@ -401,7 +228,7 @@
                                     <span class="discount-badge">5% OFF</span>
                                 </div>
                                 <div class="product-price px-3 pb-2">
-                                    <h5 class="card-title">Sofá</h5>
+                                    <h5 class="card-title">Vestidos Arraia dos Sonhos</h5>
                                     <div class="mb-2">
                                         <small class="text-warning">
                                             <i class="bi bi-star-fill"></i>
@@ -425,8 +252,8 @@
                         </div>
                         <div class="col">
                             <div class="card product-card">
-                                <div class="product-image"><img src="./assets/images/product/9.png" class="card-img-top image-first" alt="Template de eCommerce">
-                                    <img src="./assets/images/product/10.png" class="card-img-top image-second" alt="Template de eCommerce"></div>
+                                <div class="product-image"><img src="./assets/images/product/7.png" class="card-img-top image-first" alt="Vestidos Arraia dos Sonhos">
+                                    <img src="./assets/images/product/8.png" class="card-img-top image-second" alt="Vestidos Arraia dos Sonhos"></div>
                                 <div class="card-body pt-0">
                                     <div class="icons">
                                         <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Favoritos">
@@ -436,7 +263,7 @@
                                     <span class="discount-badge">30% OFF</span>
                                 </div>
                                 <div class="product-price px-3 pb-2">
-                                    <h5 class="card-title">Mesa rainbow</h5>
+                                    <h5 class="card-title">Vestidos Arraia dos Sonhos</h5>
                                     <div class="mb-2">
                                         <small class="text-warning">
                                             <i class="bi bi-star-fill"></i>
@@ -460,8 +287,8 @@
                         </div>
                         <div class="col">
                             <div class="card product-card">
-                                <div class="product-image"><img src="./assets/images/product/25.png" class="card-img-top image-first" alt="Template de eCommerce">
-                                    <img src="./assets/images/product/26.png" class="card-img-top image-second" alt="Template de eCommerce"></div>
+                                <div class="product-image"><img src="./assets/images/product/9.png" class="card-img-top image-first" alt="Vestidos Arraia dos Sonhos">
+                                    <img src="./assets/images/product/10.png" class="card-img-top image-second" alt="Vestidos Arraia dos Sonhos"></div>
                                 <div class="card-body pt-0">
                                     <div class="icons">
                                         <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Favoritos">
@@ -471,7 +298,7 @@
                                     <span class="discount-badge">10% OFF</span>
                                 </div>
                                 <div class="product-price px-3 pb-2">
-                                    <h5 class="card-title">Mesa de centro</h5>
+                                    <h5 class="card-title">Vestidos Arraia dos Sonhos</h5>
                                     <div class="mb-2">
                                         <small class="text-warning">
                                             <i class="bi bi-star-fill"></i>
@@ -495,8 +322,8 @@
                         </div>
                         <div class="col">
                             <div class="card product-card">
-                                <div class="product-image"><img src="./assets/images/product/5.png" class="card-img-top image-first" alt="Template de eCommerce">
-                                    <img src="./assets/images/product/6.png" class="card-img-top image-second" alt="Template de eCommerce"></div>
+                                <div class="product-image"><img src="./assets/images/product/11.png" class="card-img-top image-first" alt="Vestidos Arraia dos Sonhos">
+                                    <img src="./assets/images/product/12.png" class="card-img-top image-second" alt="Vestidos Arraia dos Sonhos"></div>
                                 <div class="card-body pt-0">
                                     <div class="icons">
                                         <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Favoritos">
@@ -506,7 +333,7 @@
                                     <span class="discount-badge">30% OFF</span>
                                 </div>
                                 <div class="product-price px-3 pb-2">
-                                    <h5 class="card-title">Painel de madeira</h5>
+                                    <h5 class="card-title">Vestidos Arraia dos Sonhos</h5>
                                     <div class="mb-2">
                                         <small class="text-warning">
                                             <i class="bi bi-star-fill"></i>
@@ -530,8 +357,8 @@
                         </div>
                         <div class="col">
                             <div class="card product-card">
-                                <div class="product-image"><img src="./assets/images/product/11.png" class="card-img-top image-first" alt="Template de eCommerce">
-                                    <img src="./assets/images/product/12.png" class="card-img-top image-second" alt="Template de eCommerce"></div>
+                                <div class="product-image"><img src="./assets/images/product/13.png" class="card-img-top image-first" alt="Vestidos Arraia dos Sonhos">
+                                    <img src="./assets/images/product/14.png" class="card-img-top image-second" alt="Vestidos Arraia dos Sonhos"></div>
                                 <div class="card-body pt-0">
                                     <div class="icons">
                                         <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Favoritos">
@@ -541,7 +368,7 @@
                                     <span class="discount-badge">30% OFF</span>
                                 </div>
                                 <div class="product-price px-3 pb-2">
-                                    <h5 class="card-title">Madeira natural</h5>
+                                    <h5 class="card-title">Vestidos Arraia dos Sonhos</h5>
                                     <div class="mb-2">
                                         <small class="text-warning">
                                             <i class="bi bi-star-fill"></i>
@@ -565,8 +392,8 @@
                         </div>
                         <div class="col">
                             <div class="card product-card">
-                                <div class="product-image"><img src="./assets/images/product/29.png" class="card-img-top image-first" alt="Template de eCommerce">
-                                    <img src="./assets/images/product/30.png" class="card-img-top image-second" alt="Template de eCommerce"></div>
+                                <div class="product-image"><img src="./assets/images/product/15.png" class="card-img-top image-first" alt="Vestidos Arraia dos Sonhos">
+                                    <img src="./assets/images/product/16.png" class="card-img-top image-second" alt="Vestidos Arraia dos Sonhos"></div>
                                 <div class="card-body pt-0">
                                     <div class="icons">
                                         <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Favoritos">
@@ -576,7 +403,7 @@
                                     <span class="discount-badge">30% OFF</span>
                                 </div>
                                 <div class="product-price px-3 pb-2">
-                                    <h5 class="card-title">Mesa de chá</h5>
+                                    <h5 class="card-title">Vestidos Arraia dos Sonhos</h5>
                                     <div class="mb-2">
                                         <small class="text-warning">
                                             <i class="bi bi-star-fill"></i>
@@ -600,8 +427,8 @@
                         </div>
                         <div class="col">
                             <div class="card product-card">
-                                <div class="product-image"><img src="./assets/images/product/31.png" class="card-img-top image-first" alt="Template de eCommerce">
-                                    <img src="./assets/images/product/32.png" class="card-img-top image-second" alt="Template de eCommerce"></div>
+                                <div class="product-image"><img src="./assets/images/product/f.png" class="card-img-top image-first" alt="Vestidos Arraia dos Sonhos">
+                                    <img src="./assets/images/product/4.png" class="card-img-top image-second" alt="Vestidos Arraia dos Sonhos"></div>
                                 <div class="card-body pt-0">
                                     <div class="icons">
                                         <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Favoritos">
@@ -611,7 +438,7 @@
                                     <span class="discount-badge">30% OFF</span>
                                 </div>
                                 <div class="product-price px-3 pb-2">
-                                    <h5 class="card-title">Mesa de apoio</h5>
+                                    <h5 class="card-title">Vestidos Arraia dos Sonhos</h5>
                                     <div class="mb-2">
                                         <small class="text-warning">
                                             <i class="bi bi-star-fill"></i>
@@ -635,29 +462,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-50 mb-5">
-                    <div class="col-lg-12">
-                        <div class="pagination-main">
-                            <div class="row">                   
-                                <div class="col-sm-6 pagination_result">Mostrando 1 de 5 (1 página)</div>
-                                <div class="col-sm-6 text-md-end">
-                                  <ul class="pagination">
-                                    <li class="page-item active">
-                                      <span class="page-link">1</span>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">2</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#"><i class="fa-solid fa-chevron-right"></i></a>
-                                    </li>
-                                  </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                  </section>
               </div>
            </div>
