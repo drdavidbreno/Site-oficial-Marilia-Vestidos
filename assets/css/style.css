@@ -1902,17 +1902,48 @@ font-size: 24px;
   overflow: hidden;
 }
 
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  background: url('../images/banner/fundosobrenos.png') center center;
+  background-size: cover;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.contact-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 180px;
+  background: linear-gradient(to bottom, var(--background-color) 0%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+}
+
+.contact-section > * {
+  position: relative;
+  z-index: 1;
+}
+
 .contact-section .contact-adress-section {
-  background-color: #f7ddc3;
-  border: 1px solid rgba(121, 0, 97, 0.16);
+  background-color: rgba(247, 221, 195, 0.94);
+  border: 1px solid rgba(199, 144, 95, 0.35);
   border-radius: 8px;
-  box-shadow: 0 12px 30px rgba(121, 0, 97, 0.12);
+  box-shadow: 0 12px 30px rgba(58, 31, 18, 0.16);
   color: #3b1f12;
   overflow: hidden;
 }
 
 .contact-section .contact-adress-section h3 {
-  color: #790061;
+  color: #3b1f12;
   font-weight: 700;
 }
 
@@ -1923,7 +1954,7 @@ font-size: 24px;
 .contact-section .contact-adress-section .form-control {
   background-color: #fff8fb !important;
   color: #3b1f12;
-  border: 1px solid rgba(121, 0, 97, 0.12) !important;
+  border: 1px solid rgba(199, 144, 95, 0.28) !important;
 }
 
 .contact-section .contact-adress-section .form-control::placeholder {
@@ -1932,28 +1963,14 @@ font-size: 24px;
 
 .contact-page-title {
   font-family: 'BillieJames', cursive;
-  font-size: 96px;
+  font-size: 86px;
   font-weight: normal;
   margin: 0;
   text-align: center;
   position: relative;
   display: block;
-  color: #b33d72;
-  background: linear-gradient(110deg, #b33d72 0%, #b33d72 38%, #e986bd 48%, #d45a9a 52%, #b33d72 62%, #b33d72 100%);
-  background-size: 240% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: contact-title-shine 3s linear infinite;
-}
-
-@keyframes contact-title-shine {
-  0% {
-    background-position: 140% 0;
-  }
-  100% {
-    background-position: -140% 0;
-  }
+  color: #f7ddc3;
+  text-shadow: 3px 3px 0 rgba(58, 31, 18, 0.65);
 }
 
 .contact-content-row {
@@ -1992,9 +2009,22 @@ font-size: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #790061;
+  color: #c7905f;
   font-size: 26px;
   line-height: 1;
+}
+
+.contact-section .btn-primary {
+  background-color: #c7905f !important;
+  border-color: #c7905f !important;
+  color: #3b1f12 !important;
+}
+
+.contact-section .btn-primary:hover,
+.contact-section .btn-primary:focus {
+  background-color: #d9aa78 !important;
+  border-color: #d9aa78 !important;
+  color: #3b1f12 !important;
 }
 
 @media (max-width: 1199.98px) {
@@ -2016,12 +2046,10 @@ font-size: 24px;
 
 @media (max-width: 768px) {
   .contact-page-title {
-    font-family: var(--body-font-family);
-    font-size: 44px;
-    line-height: 1.15;
-    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: normal;
     letter-spacing: 0;
-    text-transform: uppercase;
   }
 
   .contact-info-wrap {

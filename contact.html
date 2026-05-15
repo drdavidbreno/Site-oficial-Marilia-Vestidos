@@ -116,8 +116,8 @@
               <section class="py-4 bg-gray-100 mt-0">
                 <div class="container">
                         <h2 class="contact-page-title">Contato</h2>
-                        <div class="row contact-content-row">
-                              <div class="col-lg-5 mb-4">
+                        <div class="row contact-content-row justify-content-center">
+                              <div class="col-lg-6 col-md-10 mb-4">
                                   <div class="contact-adress-section p-4">
                                     <div class="contact-info-wrap">
                                     <div class="contact-logo-side">
@@ -159,38 +159,6 @@
                                     </div>
                                   </div>
                                 </div>
-                              <div class="col-lg-7">
-                                <div class="contact-adress-section p-4">
-                                    <form class="form" id="contact-form" method="post">
-                                        <div class="controls">
-                                          <div class="row">
-                                            <div class="col-sm-6">
-                                              <div class="mb-4">
-                                                <label class="form-label visually-hidden" for="name">Seu nome <span class="text-danger">*</span></label>
-                                                <input class="form-control bg-light border-0 py-3" type="text" name="name" id="name" placeholder="Digite seu nome" required="required">
-                                              </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                              <div class="mb-4">
-                                                <label class="form-label visually-hidden" for="surname">Seu sobrenome <span class="text-danger">*</span></label>
-                                                <input class="form-control bg-light border-0 py-3" type="text" name="surname" id="surname" placeholder="Digite seu sobrenome" required="required">
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="mb-4">
-                                            <label class="form-label visually-hidden" for="email">Seu e-mail <span class="text-danger">*</span></label>
-                                            <input class="form-control bg-light border-0 py-3" type="email" name="email" id="email" placeholder="Digite seu e-mail" required="required">
-                                          </div>
-                                          <div class="mb-4">
-                                            <label class="form-label visually-hidden" for="message">Sua mensagem para nós <span class="text-danger">*</span></label>
-                                            <textarea class="form-control bg-light border-0 py-3" rows="2" name="message" id="message" placeholder="Digite sua mensagem" required="required"></textarea>
-                                          </div>
-                                          <button class="btn btn-primary" type="submit">Enviar mensagem</button>
-                                        </div>
-                                      </form>
-                                </div>
-                                
-                              </div>
                         </div>
                 </div>
               </section>
@@ -203,20 +171,6 @@
 <script src="./assets/plugin/nouislider/nouislider.min.js"></script>
 <script src="./assets/plugin/slick/slick.min.js"></script>
 <script src="./assets/js/main.js"></script>
-<script>
-    document.getElementById('contact-form').addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        const name = document.getElementById('name').value.trim();
-        const surname = document.getElementById('surname').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
-        const text = `Olá, meu nome é ${name} ${surname}. Meu e-mail é ${email}. Mensagem: ${message}`;
-        const whatsappUrl = `https://wa.me/5538988157533?text=${encodeURIComponent(text)}`;
-
-        window.open(whatsappUrl, '_blank');
-    });
-</script>
 </body>
 </html>
 
