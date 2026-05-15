@@ -1797,10 +1797,6 @@ font-size: 24px;
   .breadcrumb-main .page-title {
     font-size: 20px !important;
   }
-
-  .contact-page-title {
-    font-size: 58px;
-  }
 }
 
 .breadcrumb {
@@ -1906,6 +1902,34 @@ font-size: 24px;
   overflow: hidden;
 }
 
+.contact-section .contact-adress-section {
+  background-color: #f7ddc3;
+  border: 1px solid rgba(121, 0, 97, 0.16);
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(121, 0, 97, 0.12);
+  color: #3b1f12;
+  overflow: hidden;
+}
+
+.contact-section .contact-adress-section h3 {
+  color: #790061;
+  font-weight: 700;
+}
+
+.contact-section .contact-adress-section .text-muted {
+  color: #5f3b2a !important;
+}
+
+.contact-section .contact-adress-section .form-control {
+  background-color: #fff8fb !important;
+  color: #3b1f12;
+  border: 1px solid rgba(121, 0, 97, 0.12) !important;
+}
+
+.contact-section .contact-adress-section .form-control::placeholder {
+  color: rgba(59, 31, 18, 0.58);
+}
+
 .contact-page-title {
   font-family: 'BillieJames', cursive;
   font-size: 96px;
@@ -1939,19 +1963,20 @@ font-size: 24px;
 .contact-info-wrap {
   display: flex;
   align-items: flex-start;
-  gap: 18px;
-  margin-left: -55px;
+  gap: 16px;
+  margin-left: 0;
 }
 
 .contact-logo-side {
-  flex: 0 0 225px;
+  flex: 0 0 clamp(150px, 13vw, 190px);
 }
 
 .contact-logo-side img {
-  width: 225px;
+  width: 100%;
+  max-width: 190px;
   height: auto;
   display: block;
-  margin-top: 28px;
+  margin-top: 12px;
 }
 
 .contact-social-icon {
@@ -1972,7 +1997,33 @@ font-size: 24px;
   line-height: 1;
 }
 
+@media (max-width: 1199.98px) {
+  .contact-info-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-logo-side {
+    flex: 0 0 auto;
+  }
+
+  .contact-logo-side img {
+    width: 180px;
+    max-width: 70vw;
+    margin-top: 0;
+  }
+}
+
 @media (max-width: 768px) {
+  .contact-page-title {
+    font-family: var(--body-font-family);
+    font-size: 44px;
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
   .contact-info-wrap {
     flex-direction: column;
     align-items: center;
@@ -1985,7 +2036,9 @@ font-size: 24px;
   }
 
   .contact-logo-side img {
-    width: 220px;
+    width: 180px;
+    max-width: 70vw;
+    margin-top: 0;
   }
 }
 
