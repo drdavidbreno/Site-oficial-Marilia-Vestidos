@@ -13,6 +13,11 @@
   font-style: normal;
 }
 
+/* Use lighter WebP asset for OwlCarousel play icon */
+.owl-carousel .owl-video-play-icon{
+  background-image: url('../plugin/OwlCarousel2-2.3.4/dist/assets/owl.video.play.webp');
+}
+
 @font-face {
   font-family: 'Chunq';
   src: url('../font/Chunq.ttf') format('truetype');
@@ -24,7 +29,7 @@
 body{
    font-family: var(--body-font-family);
    font-size: 14px;
-   background: var(--background-color) url('../images/fundofinal.png') center center / cover fixed no-repeat;
+  background: var(--background-color) url('../images/fundofinal.webp') center center / cover fixed no-repeat;
    position: relative;
 }
 
@@ -288,7 +293,7 @@ header > .container {
   min-height: 0;
   display: flex;
   align-items: center;
-  background: url('../images/barramenu.png') center center / 100% 100% no-repeat;
+  background: url('../images/barramenu.webp') center center / 100% 100% no-repeat;
   margin-top: 0 !important;
   margin-left: auto;
   margin-right: auto;
@@ -786,7 +791,7 @@ overflow: hidden;
   transform: translateX(-50%);
   width: 100vw;
   height: 100%;
-  background: url('../images/banner/fundosobrenos.png') center center;
+  background: url('../images/banner/fundosobrenos.webp') center center;
   background-size: cover;
   opacity: 0.15;
   pointer-events: none;
@@ -1677,7 +1682,7 @@ font-size: 24px;
   text-align: center;
   padding: 110px 0;
   margin-bottom: 30px;
-  background: url('../../assets/images/banner/5.png') center center;
+  background: url('../../assets/images/banner/5.webp') center center;
   background-size: cover;
   overflow: hidden;
 }
@@ -1910,7 +1915,7 @@ font-size: 24px;
   transform: translateX(-50%);
   width: 100vw;
   height: 100%;
-  background: url('../images/banner/fundosobrenos.png') center center;
+  background: url('../images/banner/fundosobrenos.webp') center center;
   background-size: cover;
   opacity: 0.15;
   pointer-events: none;
